@@ -9,5 +9,5 @@
 </head>
 <body>
     <header class="header">
-    <div><img class="logga" src="images/DQ-logga.png" alt="logo"></div>
+    <img class="logga" src="images/DQ-logga.png" alt="logo">
     </header>

@@ -1,6 +1,12 @@
 .logga {
   max-width: 600px;
-  padding: 2em;
+  padding: 0.5em;
+}
+
+@media (min-width: 700px) {
+  .logga {
+    padding: 2em;
+  }
 }
 
 .header {
@@ -10,11 +16,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(245, 218, 167, 0.178);
 }
 
 .footer {
-  background-color: rgba(245, 218, 167, 0.178);
   text-align: center;
   padding: 5em;
 }
@@ -24,9 +28,18 @@
   color: #161616;
 }
 
+body {
+  background-color: rgba(245, 218, 167, 0.178);
+}
+
+h1 {
+  text-align: center;
+}
+
 h2 {
   font-size: 30px;
   font-weight: 700;
+  text-align: center;
 }
 
 .rules {
@@ -40,7 +53,6 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: rgba(245, 218, 167, 0.178);
 }
 
 p {
@@ -56,10 +68,10 @@ p {
 .label {
   font-size: 23px;
   font-weight: 500;
+  text-align: center;
 }
 
 .username {
-  width: 300px;
   font-size: 20px;
   margin: 1em;
   padding: 0.5em;
@@ -71,7 +83,7 @@ p {
 
 .start {
   font-size: 25px;
-  max-width: 700px;
+  max-width: 500px;
   margin: 2em;
   padding: 0.5em;
   background-color: #fce7dc;
@@ -99,15 +111,21 @@ p {
 }
 
 .option {
-  font-size: 25px;
-  width: 500px;
-  height: 50px;
+  font-size: 20px;
+  min-width: 300px;
+  height: 40px;
   -webkit-box-shadow: 0 4px 6px 0 rgba(148, 148, 148, 0.5);
           box-shadow: 0 4px 6px 0 rgba(148, 148, 148, 0.5);
   background-color: #ffeedd;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid #ffc5dd;
   margin: 0.5em;
+}
+
+@media (min-width: 700px) {
+  .option {
+    min-width: 400px;
+  }
 }
 
 .option:active {
@@ -122,13 +140,60 @@ p {
 }
 
 .img-controller {
-  max-width: 700px;
+  width: 300px;
+}
+
+@media (min-width: 700px) {
+  .img-controller {
+    width: 400px;
+  }
 }
 
 #dog {
-  max-width: 700px;
+  max-width: 300px;
+  max-height: 400px;
+  margin-bottom: 1em;
   -webkit-box-shadow: 0 4px 6px 0 rgba(148, 148, 148, 0.5);
           box-shadow: 0 4px 6px 0 rgba(148, 148, 148, 0.5);
-  margin-bottom: 3em;
+}
+
+@media (min-width: 700px) {
+  #dog {
+    max-width: 400px;
+    margin-bottom: 2em;
+  }
+}
+
+.highscore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.highscoreTable {
+  padding: 1em;
+  background-color: rgba(245, 219, 202, 0.507);
+  -webkit-box-shadow: 0 4px 6px 0 rgba(148, 148, 148, 0.5);
+          box-shadow: 0 4px 6px 0 rgba(148, 148, 148, 0.5);
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
