@@ -5,7 +5,6 @@ let question = {};
 async function getQuestion() {
   let randomInt = getRandomAnswer(choices_amount);
   const response = await fetch(endpoint);
-  console.log(response);
 
   const data = await response.json();
 
@@ -18,7 +17,13 @@ async function getQuestion() {
     correctAnswer: randomInt,
     corrAnswerImgUrl: data.message[randomInt],
   };
-  console.log(question);
+  if (findbreed(data.message[0]) == findbreed(data.message[1])) {
+    getQuestion();
+  }
+  if (findbreed(data.message[1]) == findbreed(data.message[2])) {
+    getQuestion();
+  }
+
   buildHTML(question);
 }
 getQuestion();

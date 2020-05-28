@@ -20,7 +20,7 @@
 <br>
 <form class="form" action="playpage.php" method="POST">
   <label class="label" for="name">What do you want us to call you? </label><br>
-  <input id="player" class="username" type="text" name="uName" placeholder="write your username" /><br>
+  <input id="player" class="username" type="text" name="uName" placeholder="Write your name" /><br>
   <button id ="start" class="start">Let's get started!</button>
 </form>
 </div>

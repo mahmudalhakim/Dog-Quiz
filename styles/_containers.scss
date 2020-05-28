@@ -1,7 +1,7 @@
 .img-controller {
-  width: 300px;
+  max-width: 300px;
   @media (min-width: 700px) {
-    width: 400px;
+    max-width: 400px;
   }
 }
 
@@ -16,17 +16,45 @@
     margin-bottom: 2em;
   }
 }
+.btnCon {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @media (min-width: 700px) {
+    flex-direction: row;
+    width: 500px;
+  }
+
+  div {
+    width: 200px;
+  }
+}
 .highscore {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .highscoreTable {
+  display: table-row;
   padding: 1em;
   background-color: rgba(245, 219, 202, 0.507);
   box-shadow: 0 4px 6px 0 rgba(148, 148, 148, 0.5);
+  margin-bottom: 3em;
 }
-
+td {
+  padding: 0 15px 5px;
+}
+th {
+  padding: 0 15px 20px;
+  line-height: 30px;
+}
 .form {
   display: flex;
   flex-direction: column;

@@ -2,42 +2,41 @@ let questionCounterText = document.getElementById("questionCounter");
 let scoreText = document.getElementById("score");
 let score = 0;
 let questionCounter = 1;
-const maxQuestions = 3;
-questionCounterText.innerText = questionCounter + "/" + maxQuestions;
+const maxQuestions = 10;
+questionCounterText.innerText =
+  "Question: " + questionCounter + "/" + maxQuestions;
 
 getQuestion();
 function correctAnswer(id) {
-  console.log("id: ", id);
-  console.log("question outside:", question.correctAnswer);
   questionCounter++;
 
-  if (questionCounter > maxQuestions) {
-    //Skicka score plus namn till databasen och användaren till slutsidan där highscore och ens egna poäng visas
-    console.log("SLUT");
-    location.href = "endpage.php";
+  if (id == question.correctAnswer) {
+    document.getElementById("correct").innerHTML = "Right pup!";
+
+    setTimeout(function () {
+      document.getElementById("correct").innerHTML = "";
+    }, 1000);
+
+    incrementScore(1);
+    questionCounterText.innerText =
+      "Question: " + questionCounter + "/" + maxQuestions;
+    setTimeout(getQuestion, 1000);
+  } else {
+    document.getElementById("incorrect").innerHTML = "Wrong pup :(";
+
+    setTimeout(function () {
+      document.getElementById("incorrect").innerHTML = "";
+    }, 1000);
+    questionCounterText.innerText =
+      "Question: " + questionCounter + "/" + maxQuestions;
+    setTimeout(getQuestion, 1000);
   }
 
-  if (id == question.correctAnswer) {
-    console.log(
-      "correct! your answer is",
-      id,
-      "the correct answer is",
-      question.correctAnswer
-    );
-    incrementScore(1);
-    questionCounterText.innerText = questionCounter + "/" + maxQuestions;
-    getQuestion();
-    //popup med gå vidare till nästa fråga eller visa med färg på knapparna
-  } else {
-    console.log("you suck");
-    incrementScore(0);
-    questionCounterText.innerText = questionCounter + "/" + maxQuestions;
-    getQuestion();
-    //popup med gå vidare till nästa fråga eller visa med färg på knapparna
+  if (questionCounter > maxQuestions) {
+    location.href = "endpage.php?score=" + score;
   }
-  console.log("score: ", score);
 }
 incrementScore = (num) => {
   score += num;
-  scoreText.innerText = score;
+  scoreText.innerText = "Score: " + score;
 };
