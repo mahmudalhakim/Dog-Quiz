@@ -1,9 +1,9 @@
 <?php
+session_start();
  require_once 'header.php';
  require_once 'db.php';
 
  if(isset($_POST['uName'])){
-    session_start();
     $player = htmlspecialchars($_POST["uName"]);
     $_SESSION['uName'] = htmlspecialchars($_POST["uName"]); 
         

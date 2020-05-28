@@ -1,12 +1,13 @@
 <?php 
 /**************************************** *
  * connect to database and server
+ * LOCALHOST
 **************************************** */
 
 $db_server   = "localhost";
 $db_database = "hundquiz";
 $db_username = "root";
-$db_password = "root"; 
+$db_password = "root";
 
 try {
   $db = new PDO("mysql:host=$db_server;dbname=$db_database;charset=utf8" 

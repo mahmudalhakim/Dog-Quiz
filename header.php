@@ -8,6 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-    <a href='index.php'><header class="header">
-    <img class="logga" src="images/DQ-logga.png" alt="logo">
-    </header></a>
+    <header class="header">
+    <div><img class="logga" src="images/DQ-logga.png" alt="logo"></div>
+    </header>

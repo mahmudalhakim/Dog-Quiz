@@ -1,8 +1,8 @@
 <?php
+session_start();
  require_once 'header.php';
  require_once 'db.php';
 
-session_start();
 $score = htmlspecialchars($_GET['score']);
 $player = $_SESSION['uName'];
 
