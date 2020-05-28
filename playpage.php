@@ -5,7 +5,7 @@
  if(isset($_POST['uName'])){
     session_start();
     $player = htmlspecialchars($_POST["uName"]);
-    $_SESSION['uName'] = $player; 
+    $_SESSION['uName'] = htmlspecialchars($_POST["uName"]); 
         
     $message = "<div class='rules' onLoad='nextQuestion.js'>
                 <h1 id='player'>Let's Go $player!</h1>
