@@ -33,5 +33,5 @@ session_start();
 <script src="getRandomAnswer.js"></script>
 <script src="getQuestion.js"></script>
 <script src="buildHTML.js"></script>
-<script src="nextQuestion.js"></script>
+<script src="correctAnswer.js"></script>
 

@@ -23,7 +23,9 @@ async function getQuestion() {
   if (findbreed(data.message[1]) == findbreed(data.message[2])) {
     getQuestion();
   }
-
+  if (findbreed(data.message[2]) == findbreed(data.message[0])) {
+    getQuestion();
+  }
   buildHTML(question);
 }
 getQuestion();

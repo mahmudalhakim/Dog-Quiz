@@ -18,8 +18,10 @@ function correctAnswer(id) {
     }, 1000);
 
     incrementScore(1);
-    questionCounterText.innerText =
-      "Question: " + questionCounter + "/" + maxQuestions;
+    setTimeout(function () {
+      questionCounterText.innerText =
+        "Question: " + questionCounter + "/" + maxQuestions;
+    }, 1000);
     setTimeout(getQuestion, 1000);
   } else {
     document.getElementById("incorrect").innerHTML = "Wrong pup :(";
@@ -27,8 +29,10 @@ function correctAnswer(id) {
     setTimeout(function () {
       document.getElementById("incorrect").innerHTML = "";
     }, 1000);
-    questionCounterText.innerText =
-      "Question: " + questionCounter + "/" + maxQuestions;
+    setTimeout(function () {
+      questionCounterText.innerText =
+        "Question: " + questionCounter + "/" + maxQuestions;
+    }, 1000);
     setTimeout(getQuestion, 1000);
   }
 

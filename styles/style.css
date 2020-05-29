@@ -1,10 +1,11 @@
 .logga {
-  max-width: 600px;
+  max-width: 330px;
   padding: 0.5em;
 }
 
 @media (min-width: 700px) {
   .logga {
+    max-width: 600px;
     padding: 2em;
   }
 }
